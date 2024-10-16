@@ -1,0 +1,29 @@
+@mixin afacad-bold{
+    font-family: "Afacad", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@mixin afacad-semibold{
+    font-family: "Afacad", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
+
+@mixin poppins-regular{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin poppins-semibold{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+@mixin poppins-bold{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}

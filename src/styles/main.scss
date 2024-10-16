@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@400..700&family=Poppins:wght@400;600;700&display=swap');
+@import 'variables';
+@import 'typography';
+@import 'components/logo';
+@import 'components/selectList';
+@import 'components/button';
+@import 'pages/home';
+@import 'pages/game';
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $background;
+    color: $white;
+    @include poppins-regular;
+}
+
+.app{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

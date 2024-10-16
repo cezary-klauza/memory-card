@@ -1,0 +1,22 @@
+.button{
+    width: fit-content;
+    padding: 16px 32px;
+    margin: auto;
+    border-radius: 16px;
+    outline: none;
+    border: none;
+    color: $white;
+    background: linear-gradient(145deg, rgba(0,168,148,1) 0%, rgba(0,129,200,1) 50%, rgba(0,168,148,1) 100%);
+    background-size: 200%;
+    background-position: left;
+    cursor: pointer;
+
+    &:hover{
+        background-position: right;
+    }
+
+    transition: 0.2s ease-in-out;
+
+    @include poppins-semibold;
+    font-size: 16px;
+}
