@@ -9,7 +9,7 @@ type Illustrations = {
     }[]
 }
 
-type SettingsState = {
+export type SettingsState = {
     difficulty: string | undefined,
     illustrations: Illustrations | undefined,
 }

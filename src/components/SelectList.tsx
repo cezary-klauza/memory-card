@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { SettingsState } from "../stores/settingsStore";
 
-type ListItem = {
-    icon: string,
-    title: string
-}
 
 type SelectListProps = {
-    list: ListItem[],
+    list: {
+        icon: string,
+        title: string
+    }[],
     name: string;
     value: {
         icon: string,
@@ -17,9 +15,8 @@ type SelectListProps = {
     set: (value: any) => void
 }
 
-const SelectList = ({list, name, set}: SelectListProps) => {
+const SelectList = ({list, name, set, value}: SelectListProps) => {
     const [isActive, setIsActive] = useState(false);
-    const [value, setValue] = useState<ListItem | null>(null);
 
   return (
     <div className="select-list">
