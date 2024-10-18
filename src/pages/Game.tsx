@@ -74,7 +74,15 @@ const Game = () => {
       }, 2000);
       if (timer.current) clearInterval(timer.current);
     }
-  }, [difficulty, end, matched.length, navigate]);
+  }, [
+    difficulty,
+    end,
+    fails,
+    illustrations?.title,
+    matched.length,
+    navigate,
+    time,
+  ]);
 
   return (
     <motion.div
