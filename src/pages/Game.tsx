@@ -31,7 +31,7 @@ const Game = () => {
       end();
       navigate("/");
     }
-  }, []);
+  }, [difficulty, end, illustrations, list.length, navigate]);
 
   useEffect(() => {
     setTimeout(() => clear(), 500);
@@ -107,7 +107,7 @@ const Game = () => {
 
       <div className={`grid ${difficulty?.toLowerCase()}`}>
         {list.map(({ image, background }, index) => (
-          <Card img={image} background={background} index={index} key={index}/>
+          <Card img={image} background={background} index={index} key={index} />
         ))}
       </div>
     </motion.div>
