@@ -1,16 +1,17 @@
-import { ReactNode } from "react"
+import { ReactNode } from "react";
 
 type ButtonProps = {
-    children: ReactNode,
-    onClick: () => void
-}
+  children: ReactNode;
+  onClick: () => void;
+  active: boolean;
+};
 
-const Button = ({children, onClick}: ButtonProps) => {
+const Button = ({ children, onClick, active }: ButtonProps) => {
   return (
-    <button onClick={onClick} className="button">
-        {children}
+    <button onClick={onClick} className={`button ${!active && "unactive"}`}>
+      {children}
     </button>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

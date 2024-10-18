@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { illustrations } from "../constants";
 
 type Illustrations = {
     icon: string,
@@ -16,12 +17,19 @@ export type SettingsState = {
 
 type SettingsAction = {
     setDifficulty: (difficulty: SettingsState['difficulty']) => void,
-    setIllustrations: (illustration: SettingsState['illustrations']) => void
+    setIllustrations: (name: string) => void,
+    clear: () => void
 }
 
 export const useSettingStore = create<SettingsState & SettingsAction>((set) => ({
     difficulty: undefined,
     illustrations: undefined,
-    setDifficulty: ( difficulty: string | undefined ) => set({ difficulty: difficulty }),
-    setIllustrations: ( illustration: Illustrations | undefined ) => set({ illustrations: illustration })
+    setDifficulty: ( difficulty ) => set({ difficulty: difficulty }),
+    setIllustrations: ( name ) => {
+        const newIllustrations = illustrations.find(item => item.title === name);
+        set({ illustrations: newIllustrations });
+    },
+    clear: () => {
+        set({difficulty: undefined, illustrations: undefined})
+    }
 }))
